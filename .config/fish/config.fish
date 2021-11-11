@@ -35,6 +35,8 @@ alias gs "git status"
 alias goto "cd (find -type d | fzf)"
 alias view "xdg-open (find -type f | fzf)"
 alias config "/usr/bin/git --git-dir=/home/mineranger/.cfg/ --work-tree=/home/mineranger"
+alias apt-update "sudo apt update && sudo apt upgrade -y && sudo apt clean"
+alias update-all "apt-update && flatpak update -y"
 alias cs "config status"
 #Adding nvm support
 set -x NVM_DIR ~/.nvm

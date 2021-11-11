@@ -12,6 +12,7 @@ key_bindings:
         - {key: I , mods: Control , chars: "sudo apt install (echo $history[1] | awk '{print $1}')\r"}
         - {key: Comma , mods: Control , chars: "vim ~/.config/alacritty/alacritty.yml\r"}
         - {key: Period , mods: Control , chars: "vim ~/.config/fish/config.fish\r"}
+        - {key: R , mods: Control , chars: "source ~/.config/fish/config.fish\r"}
         - {key: F , mods: Control , chars: "nautilus . &\r"}
 
 # Colors (Nord)
