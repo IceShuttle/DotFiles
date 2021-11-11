@@ -13,6 +13,7 @@ key_bindings:
         - {key: Comma , mods: Control , chars: "vim ~/.config/alacritty/alacritty.yml\r"}
         - {key: Period , mods: Control , chars: "vim ~/.config/fish/config.fish\r"}
         - {key: R , mods: Control , chars: "source ~/.config/fish/config.fish\r"}
+        - {key: U , mods: Control , chars: "update-all\r"}
         - {key: F , mods: Control , chars: "nautilus . &\r"}
 
 # Colors (Nord)
