@@ -40,6 +40,6 @@ alias update-all "apt-update; flatpak update -y"
 alias cs "config status"
 #Adding nvm support
 set -x NVM_DIR ~/.nvm
-nvm use lts --silent 1>/dev/null
+nvm use lts --silent 1>/dev/null 2>/dev/null
 set EDITOR "/usr/bin/nvim"
 starship init fish | source
