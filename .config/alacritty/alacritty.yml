@@ -1,46 +1,63 @@
 shell:
-        program: /usr/bin/fish
+  program: /usr/bin/fish
 
 font:
-        size: 13.0
-        
+  size: 13.0
+
 key_bindings:
-        - {key: H , mods: Control , chars: "cd ~\r"}
-        - {key: G , mods: Control , chars: "goto \r"}
-        - {key: S , mods: Control|Shift, chars: "sudo !!\r"}
-        - {key: O , mods: Control , chars: "xdg-open (ls | fzf)\r"}
-        - {key: I , mods: Control , chars: "sudo apt install (echo $history[1] | awk '{print $1}')\r"}
-        - {key: Comma , mods: Control , chars: "vim ~/.config/alacritty/alacritty.yml\r"}
-        - {key: Period , mods: Control , chars: "vim ~/.config/fish/config.fish\r"}
-        - {key: R , mods: Control , chars: "source ~/.config/fish/config.fish\r"}
-        - {key: U , mods: Control , chars: "update-all\r"}
-        - {key: F , mods: Control , chars: "nautilus . &\r"}
+  - { key: H, mods: Control, chars: "cd ~\r" }
+  - { key: G, mods: Control, chars: "goto \r" }
+  - { key: S, mods: Control|Shift, chars: "sudo !!\r" }
+  - { key: O, mods: Control, chars: "xdg-open (ls | fzf)\r" }
+  - { key: T, mods: Control, chars: "npx alacritty-themes\r" }
+  - {
+      key: I,
+      mods: Control,
+      chars: "sudo apt install (echo $history[1] | awk '{print $1}')\r"
+    }
+  - {
+      key: Comma,
+      mods: Control,
+      chars: "vim ~/.config/alacritty/alacritty.yml\r"
+    }
+  - {
+      key: Period,
+      mods: Control,
+      chars: "vim ~/.config/fish/config.fish\r"
+    }
+  - {
+      key: R,
+      mods: Control,
+      chars: "source ~/.config/fish/config.fish\r"
+    }
+  - { key: U, mods: Control, chars: "update-all\r" }
+  - { key: F, mods: Control, chars: "nautilus . &\r" }
 
 # Colors (Nord)
 colors:
-  # Default colors
+  name: Eighties (dark)
+  author: Chris Kempson
   primary:
-    background: '0x2E3440'
-    foreground: '0xD8DEE9'
-
-  # Normal colors
+    background: "#2d2d2d"
+    foreground: "#d3d0c8"
+  cursor:
+    text: "#2d2d2d"
+    cursor: "#d3d0c8"
   normal:
-    black:   '0x3B4252'
-    red:     '0xBF616A'
-    green:   '0xA3BE8C'
-    yellow:  '0xEBCB8B'
-    blue:    '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan:    '0x88C0D0'
-    white:   '0xE5E9F0'
-
-  # Bright colors
+    black: "#2d2d2d"
+    red: "#f2777a"
+    green: "#99cc99"
+    yellow: "#ffcc66"
+    blue: "#6699cc"
+    magenta: "#cc99cc"
+    cyan: "#66cccc"
+    white: "#d3d0c8"
   bright:
-    black:   '0x4C566A'
-    red:     '0xBF616A'
-    green:   '0xA3BE8C'
-    yellow:  '0xEBCB8B'
-    blue:    '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan:    '0x8FBCBB'
-    white:   '0xECEFF4'
+    black: "#747369"
+    red: "#f2777a"
+    green: "#99cc99"
+    yellow: "#ffcc66"
+    blue: "#6699cc"
+    magenta: "#cc99cc"
+    cyan: "#66cccc"
+    white: "#f2f0ec"
