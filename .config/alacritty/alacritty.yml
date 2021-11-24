@@ -33,31 +33,31 @@ key_bindings:
   - { key: U, mods: Control, chars: "update-all\r" }
   - { key: F, mods: Control, chars: "nautilus . &\r" }
 
-# Colors (Nord)
+# Colors
 colors:
-  name: Eighties (dark)
-  author: Chris Kempson
+  # Default colors
   primary:
-    background: "#2d2d2d"
-    foreground: "#d3d0c8"
-  cursor:
-    text: "#2d2d2d"
-    cursor: "#d3d0c8"
+    background: '#2D2A2E'
+    foreground: '#FCFCFA'
+
+  # Normal colors
   normal:
-    black: "#2d2d2d"
-    red: "#f2777a"
-    green: "#99cc99"
-    yellow: "#ffcc66"
-    blue: "#6699cc"
-    magenta: "#cc99cc"
-    cyan: "#66cccc"
-    white: "#d3d0c8"
+    black: '#403E41'
+    red: '#FF6188'
+    green: '#A9DC76'
+    yellow: '#FFD866'
+    blue: '#FC9867'
+    magenta: '#AB9DF2'
+    cyan: '#78DCE8'
+    white: '#FCFCFA'
+
+  # Bright colors
   bright:
-    black: "#747369"
-    red: "#f2777a"
-    green: "#99cc99"
-    yellow: "#ffcc66"
-    blue: "#6699cc"
-    magenta: "#cc99cc"
-    cyan: "#66cccc"
-    white: "#f2f0ec"
+    black: '#727072'
+    red: '#FF6188'
+    green: '#A9DC76'
+    yellow: '#FFD866'
+    blue: '#FC9867'
+    magenta: '#AB9DF2'
+    cyan: '#78DCE8'
+    white: '#FCFCFA'
