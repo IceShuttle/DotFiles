@@ -2,6 +2,7 @@ shell:
   program: /usr/bin/fish
 
 font:
+  family: "JetBrains Mono"
   size: 13.0
 
 key_bindings:
