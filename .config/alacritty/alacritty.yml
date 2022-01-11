@@ -2,8 +2,10 @@ shell:
   program: /usr/bin/fish
 
 font:
-  family: "JetBrains Mono"
   size: 13.0
+  normal:
+          family: "Fira Code"
+          #family: "JetBrainsMono Nerd Font"
 
 key_bindings:
   - { key: H, mods: Control, chars: "cd ~\r" }
