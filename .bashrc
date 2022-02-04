@@ -128,5 +128,25 @@ export PATH="$HOME/CustomScripts:$PATH"
 alias cls="clear"
 alias bat="batcat"
 alias kdenlive="flatpak run org.kde.kdenlive"
-alias config='/usr/bin/git --git-dir=/home/mineranger/.cfg/ --work-tree=/home/mineranger'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=/home/mineranger'
 eval "$(starship init bash)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="$HOME/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+. "$HOME/.cargo/env"
+export PATH="~/bin:$PATH"
+export PATH="~/.local/bin:$PATH"
+export PATH="~/miniconda3/bin:$PATH"

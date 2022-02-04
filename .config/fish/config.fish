@@ -42,4 +42,14 @@ alias cs "config status"
 set -x NVM_DIR ~/.nvm
 nvm use lts --silent 1>/dev/null 2>/dev/null
 set EDITOR "/usr/bin/nvim"
+#Adding Path
+fish_add_path ~/.yarn/bin
+fish_add_path ~/.cargo/bin
+
 starship init fish | source
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval ~/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+

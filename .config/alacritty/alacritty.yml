@@ -4,8 +4,8 @@ shell:
 font:
   size: 13.0
   normal:
-          family: "Fira Code"
-          #family: "JetBrainsMono Nerd Font"
+    family: "Fira Code Nerd Font"
+    #family: "JetBrainsMono Nerd Font"
 
 key_bindings:
   - { key: H, mods: Control, chars: "cd ~\r" }
@@ -40,27 +40,28 @@ key_bindings:
 colors:
   # Default colors
   primary:
-    background: '#2D2A2E'
-    foreground: '#FCFCFA'
+    background: '#263238'
+    foreground: '#eeffff'
 
   # Normal colors
   normal:
-    black: '#403E41'
-    red: '#FF6188'
-    green: '#A9DC76'
-    yellow: '#FFD866'
-    blue: '#FC9867'
-    magenta: '#AB9DF2'
-    cyan: '#78DCE8'
-    white: '#FCFCFA'
+    black: '#000000' # Arbitrary
+    red: '#e53935'
+    green: '#91b859'
+    yellow: '#ffb62c'
+    blue: '#6182b8'
+    magenta: '#ff5370' # Dark pink of the original material theme
+    cyan: '#39adb5'
+    white: '#a0a0a0' # Arbitrary
 
   # Bright colors
   bright:
-    black: '#727072'
-    red: '#FF6188'
-    green: '#A9DC76'
-    yellow: '#FFD866'
-    blue: '#FC9867'
-    magenta: '#AB9DF2'
-    cyan: '#78DCE8'
-    white: '#FCFCFA'
+    black: '#4e4e4e' # Arbitrary
+    red: '#ff5370'
+    green: '#c3e88d'
+    yellow: '#ffcb6b'
+    blue: '#82aaff'
+    magenta: '#f07178' # Pink of the original material theme
+    cyan: '#89ddff'
+    white: '#ffffff' # Arbitrary
+theme: Material-Theme
