@@ -5,13 +5,17 @@ font:
   size: 13.0
   normal:
     family: "Fira Code Nerd Font"
-    #family: "JetBrainsMono Nerd Font"
 
 key_bindings:
   - { key: H, mods: Control, chars: "cd ~\r" }
   - { key: G, mods: Control, chars: "goto \r" }
   - { key: S, mods: Control|Shift, chars: "sudo !!\r" }
   - { key: O, mods: Control, chars: "xdg-open (ls | fzf)\r" }
+  - {
+      key: O,
+      mods: Control|Shift,
+      chars: "nvim (fdfind --type d | fzf)\r"
+    }
   - { key: T, mods: Control, chars: "npx alacritty-themes\r" }
   - {
       key: I,
@@ -40,28 +44,33 @@ key_bindings:
 colors:
   # Default colors
   primary:
-    background: '#263238'
-    foreground: '#eeffff'
+    background: '#292C3E'
+    foreground: '#EBEBEB'
+
+  # Cursor colors
+  cursor:
+    text: '#FF261E'
+    cursor: '#FF261E'
 
   # Normal colors
   normal:
-    black: '#000000' # Arbitrary
-    red: '#e53935'
-    green: '#91b859'
-    yellow: '#ffb62c'
-    blue: '#6182b8'
-    magenta: '#ff5370' # Dark pink of the original material theme
-    cyan: '#39adb5'
-    white: '#a0a0a0' # Arbitrary
+    black: '#0d0d0d'
+    red: '#FF301B'
+    green: '#A0E521'
+    yellow: '#FFC620'
+    blue: '#1BA6FA'
+    magenta: '#8763B8'
+    cyan: '#21DEEF'
+    white: '#EBEBEB'
 
   # Bright colors
   bright:
-    black: '#4e4e4e' # Arbitrary
-    red: '#ff5370'
-    green: '#c3e88d'
-    yellow: '#ffcb6b'
-    blue: '#82aaff'
-    magenta: '#f07178' # Pink of the original material theme
-    cyan: '#89ddff'
-    white: '#ffffff' # Arbitrary
-theme: Material-Theme
+    black: '#6D7070'
+    red: '#FF4352'
+    green: '#B8E466'
+    yellow: '#FFD750'
+    blue: '#1BA6FA'
+    magenta: '#A578EA'
+    cyan: '#73FBF1'
+    white: '#FEFEF8'
+theme: Argonaut

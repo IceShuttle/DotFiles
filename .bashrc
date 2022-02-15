@@ -150,3 +150,6 @@ unset __conda_setup
 export PATH="~/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
 export PATH="~/miniconda3/bin:$PATH"
+export PATH="~/bin:$PATH"
+export PATH="~/.local/bin:$PATH"
+export PATH="~/miniconda3/bin:$PATH"
