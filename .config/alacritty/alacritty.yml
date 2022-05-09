@@ -1,22 +1,34 @@
+#       _                 _ _   _                          _
+#__ _| | __ _  ___ _ __(_) |_| |_ _   _  _   _ _ __ ___ | |
+#/ _` | |/ _` |/ __| '__| | __| __| | | || | | | '_ ` _ \| |
+#| (_| | | (_| | (__| |  | | |_| |_| |_| || |_| | | | | | | |
+#\__,_|_|\__,_|\___|_|  |_|\__|\__|\__, (_)__, |_| |_| |_|_|
+#                                  |___/  |___/
 shell:
   program: /usr/bin/fish
 
 font:
-  size: 13.0
+  size: 15.0
   normal:
-    family: "Fira Code Nerd Font"
+    family: "JetBrains Mono NL"
+    #family: "Fira Code Nerd Font"
 
+#window:
+#  opacity: 0.95
 key_bindings:
   - { key: H, mods: Control, chars: "cd ~\r" }
   - { key: G, mods: Control, chars: "goto \r" }
   - { key: S, mods: Control|Shift, chars: "sudo !!\r" }
-  - { key: O, mods: Control, chars: "xdg-open (ls | fzf)\r" }
   - {
       key: O,
       mods: Control|Shift,
       chars: "nvim (fdfind --type d | fzf)\r"
     }
-  - { key: T, mods: Control, chars: "npx alacritty-themes\r" }
+  - {
+      key: T,
+      mods: Control|Shift,
+      chars: "npx alacritty-themes\r"
+    }
   - {
       key: I,
       mods: Control,
@@ -40,37 +52,3 @@ key_bindings:
   - { key: U, mods: Control, chars: "update-all\r" }
   - { key: F, mods: Control, chars: "nautilus . &\r" }
 
-# Colors
-colors:
-  # Default colors
-  primary:
-    background: '#292C3E'
-    foreground: '#EBEBEB'
-
-  # Cursor colors
-  cursor:
-    text: '#FF261E'
-    cursor: '#FF261E'
-
-  # Normal colors
-  normal:
-    black: '#0d0d0d'
-    red: '#FF301B'
-    green: '#A0E521'
-    yellow: '#FFC620'
-    blue: '#1BA6FA'
-    magenta: '#8763B8'
-    cyan: '#21DEEF'
-    white: '#EBEBEB'
-
-  # Bright colors
-  bright:
-    black: '#6D7070'
-    red: '#FF4352'
-    green: '#B8E466'
-    yellow: '#FFD750'
-    blue: '#1BA6FA'
-    magenta: '#A578EA'
-    cyan: '#73FBF1'
-    white: '#FEFEF8'
-theme: Argonaut
