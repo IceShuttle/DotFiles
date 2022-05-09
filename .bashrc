@@ -128,7 +128,7 @@ export PATH="$HOME/CustomScripts:$PATH"
 alias cls="clear"
 alias bat="batcat"
 alias kdenlive="flatpak run org.kde.kdenlive"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=/home/mineranger'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 eval "$(starship init bash)"
 
 # >>> conda initialize >>>
