@@ -13,8 +13,6 @@ font:
     #family: "JetBrains Mono NL"
     family: "Fira Code Nerd Font"
 
-#window:
-#  opacity: 0.95
 key_bindings:
   - { key: H, mods: Control, chars: "cd ~\r" }
   - { key: G, mods: Control, chars: "goto \r" }
