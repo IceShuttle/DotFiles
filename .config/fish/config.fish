@@ -39,6 +39,7 @@ alias cs "config status"
 alias airgeddon "sudo $HOME/bin/airgeddon"
 alias findapp "apt list --installed | grep"
 alias hr "eval (history | fzf)"
+alias hs "echo (history | fzf)"
 alias vim nvim
 
 #Adding nvm support
