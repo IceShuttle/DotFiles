@@ -24,6 +24,9 @@ set $netmanager nmtui
 # on the original workspace that the command was run on.
 #set $menu wofi --show drun | xargs swaymsg exec --
 exec ulauncher
+for_window [title="ulauncher"] title_format ""
+default_border normal 0
+default_floating_border none
 exec python3 ~/.config/sway/swayfader.py
 set $menu ulauncher-toggle | xargs swaymsg exec --
 
