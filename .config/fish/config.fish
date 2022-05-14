@@ -39,6 +39,7 @@ alias cs "config status"
 alias hr "eval (history | fzf)"
 alias hs "echo (history | fzf)"
 alias vim nvim
+alias rng "kitty --title "Ranger" -e /bin/bash ranger"
 
 #Adding nvm support
 set -x NVM_DIR ~/.nvm

@@ -24,10 +24,9 @@ set $netmanager nmtui
 # on the original workspace that the command was run on.
 #set $menu wofi --show drun | xargs swaymsg exec --
 exec ulauncher
-for_window [title="ulauncher"] title_format ""
-default_border normal 0
+exec wname LG3D
 default_floating_border none
-exec python3 ~/.config/sway/swayfader.py
+exec /usr/bin/python3 ~/.config/sway/swayfader.py
 set $menu ulauncher-toggle | xargs swaymsg exec --
 
 
@@ -37,7 +36,7 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/wallpapers/com0562.jpg fill
+output * bg ~/wallpapers/PopNord.png fill
 #
 # Example configuration:
 #
@@ -170,7 +169,17 @@ output * bg ~/wallpapers/com0562.jpg fill
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-#
+    bindsym $mod+Mod1+1 exec "swaymsg move container to workspace number 1 && swaymsg workspace number 1"
+    bindsym $mod+Mod1+2 exec "swaymsg move container to workspace number 2 && swaymsg workspace number 2"
+    bindsym $mod+Mod1+3 exec "swaymsg move container to workspace number 3 && swaymsg workspace number 3" 
+    bindsym $mod+Mod1+4 exec "swaymsg move container to workspace number 4 && swaymsg workspace number 4" 
+    bindsym $mod+Mod1+5 exec "swaymsg move container to workspace number 5 && swaymsg workspace number 5" 
+    bindsym $mod+Mod1+6 exec "swaymsg move container to workspace number 6 && swaymsg workspace number 6" 
+    bindsym $mod+Mod1+7 exec "swaymsg move container to workspace number 7 && swaymsg workspace number 7" 
+    bindsym $mod+Mod1+8 exec "swaymsg move container to workspace number 8 && swaymsg workspace number 8" 
+    bindsym $mod+Mod1+9 exec "swaymsg move container to workspace number 9 && swaymsg workspace number 9" 
+    bindsym $mod+Mod1+0 exec "swaymsg move container to workspace number 0 && swaymsg workspace number 0" 
+
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
