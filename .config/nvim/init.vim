@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch':'release'}
+Plug 'dag/vim-fish'
 "Plug 'glepnir/dashboard-nvim'
 "Nerd Tree config
 Plug 'scrooloose/nerdtree'
@@ -24,7 +25,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ggandor/lightspeed.nvim'
 Plug 'lalitmee/cobalt2.nvim'
-Plug 'karb94/neoscroll.nvim'
+Plug 'neovim/nvim-lspconfig'
 
 " Themes
 Plug 'lalitmee/cobalt2.nvim'
@@ -40,7 +41,6 @@ set autochdir
 set mouse=a
 set number
 set relativenumber
-lua require('neoscroll').setup()
 
 " Setting theme
 autocmd vimenter * ++nested colorscheme onedark

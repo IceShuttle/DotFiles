@@ -3,6 +3,11 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
+for_window [title="^.*"] title_format ""
+default_border pixel 2
+
+gaps inner 10
+gaps outer 15
 
 ### Variables
 #
@@ -15,20 +20,22 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
-set $browser firefox
-set $fbrowser nautilus
+set $browser flatpak run org.mozilla.firefox
+set $fbrowser pcmanfm
 set $sshot flameshot
 set $netmanager nmtui
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu wofi --show drun | xargs swaymsg exec --
-exec ulauncher
 exec wname LG3D
+#exec ulauncher & disown
+exec /usr/bin/python3 /usr/bin/ulauncher --hide-window 1 > ~/logs/ulauncher.log 2>&1
 default_floating_border none
 exec /usr/bin/python3 ~/.config/sway/swayfader.py
+exec mpv --volume=150 /usr/share/sounds/freedesktop/stereo/service-login.oga
 set $menu ulauncher-toggle | xargs swaymsg exec --
-
+exec lxpolkit
 
 include /etc/sway/config-vars.d/*
 
@@ -36,7 +43,7 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/wallpapers/PopNord.png fill
+output * bg ~/wallpapers/artwork/backgrounds/LakeSideView.jpg fill
 #
 # Example configuration:
 #
@@ -81,6 +88,7 @@ output * bg ~/wallpapers/PopNord.png fill
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+c exec grimshot save screen
 
     # Start a file browser
     bindsym $mod+f exec $fbrowser
@@ -93,6 +101,9 @@ output * bg ~/wallpapers/PopNord.png fill
     # Open network settings
     bindsym $mod+Mod1+n exec $term -e $netmanager
 
+    # Open network settings
+    #bindsym $mod+Mod1+b exec blueberry
+
     # Start web apps
     bindsym Mod1+w exec $browser web.whatsapp.com
     bindsym Mod1+y exec $browser www.youtube.com
@@ -102,14 +113,16 @@ output * bg ~/wallpapers/PopNord.png fill
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym Mod1+space exec $menu
     
     # Brigtness Settings
     bindsym --locked XF86MonBrightnessUp exec "brightnessctl s +10%"
     bindsym --locked XF86MonBrightnessDown exec "brightnessctl s 10%-"
 
     # Volume Control
-    bindsym --locked XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-    bindsym --locked XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    bindsym --locked XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    bindsym --locked XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +1%"
+    bindsym --locked XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -1%"
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -129,6 +142,12 @@ output * bg ~/wallpapers/PopNord.png fill
 #   
     bindsym $mod+tab workspace next_on_output 
     bindsym $mod+Shift+tab workspace prev_on_output   
+    bindsym Mod1+tab focus right
+
+    bindsym $mod+n exec "sway-new-workspace open"
+    bindsym $mod+Shift+n exec "sway-new-workspace move"
+    bindsym $mod+Shift+d exec "sway-new-workspace open; exec $menu"
+
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down

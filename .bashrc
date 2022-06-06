@@ -127,6 +127,7 @@ export PATH="$HOME/CustomScripts:$PATH"
 #Custom Aliases
 alias cls="clear"
 alias bat="batcat"
+alias vim="nvim"
 alias kdenlive="flatpak run org.kde.kdenlive"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 eval "$(starship init bash)"
@@ -154,3 +155,6 @@ export PATH="~/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
 export PATH="~/miniconda3/bin:$PATH"
 export PATH="~/var/lib/flatpak/exports/bin:$PATH"
+
+export VISUAL=nvim;
+export EDITOR=nvim;
