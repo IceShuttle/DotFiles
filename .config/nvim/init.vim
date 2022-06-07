@@ -10,29 +10,28 @@ Plug 'preservim/nerdtree' |
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'PhilRunninger/nerdtree-visual-selection'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'jiangmiao/auto-pairs'
-Plug 'morhetz/gruvbox'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'terryma/vim-multiple-cursors'
 Plug 'ggandor/lightspeed.nvim'
-Plug 'lalitmee/cobalt2.nvim'
 Plug 'neovim/nvim-lspconfig'
 
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " Themes
-Plug 'lalitmee/cobalt2.nvim'
+Plug 'morhetz/gruvbox'
 Plug 'navarasu/onedark.nvim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'phanviet/vim-monokai-pro'
-Plug 'dylanaraps/wal.vim'
 Plug 'sainnhe/sonokai'
 Plug 'Rigellute/shades-of-purple.vim'
 call plug#end()
@@ -43,7 +42,7 @@ set number
 set relativenumber
 
 " Setting theme
-autocmd vimenter * ++nested colorscheme onedark
+autocmd vimenter * ++nested colorscheme gruvbox
 
 let g:neovide_transparency=0.9
 let g:airline_powerline_fonts = 1

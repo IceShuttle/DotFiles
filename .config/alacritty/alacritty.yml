@@ -7,13 +7,13 @@
 shell:
   program: /usr/bin/fish
 
-window:
-  opacity: 0.95
+#window:
+#  opacity: 0.95
 font:
   size: 15.0
   normal:
-    #family: "JetBrains Mono NL"
-    family: "Fira Code Nerd Font"
+    family: "JetBrains Mono Nerd font"
+    #family: "Fira Code Nerd Font"
 
 key_bindings:
   - { key: H, mods: Control, chars: "cd ~\r" }
