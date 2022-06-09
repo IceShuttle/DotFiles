@@ -15,11 +15,13 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'zane-/cder.nvim'
+
 Plug 'ggandor/lightspeed.nvim'
 Plug 'neovim/nvim-lspconfig'
 
@@ -58,6 +60,9 @@ let g:neomake_python_enabled_markers = ['pylint']
 tnoremap <Esc> <C-\><C-n><cr>
 
 inoremap <C-e> <C-o>A
+
+" Cder.nvim
+lua require('telescope').load_extension('cder')
 
 " telescope.nvim shortcuts
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>

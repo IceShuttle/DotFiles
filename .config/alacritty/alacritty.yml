@@ -12,11 +12,11 @@ shell:
 font:
   size: 15.0
   normal:
-    family: "JetBrains Mono Nerd font"
-    #family: "Fira Code Nerd Font"
+    #family: "JetBrains Mono Nerd font"
+    family: "FiraMono Nerd Font"
 
 key_bindings:
-  - { key: H, mods: Control, chars: "cd ~\r" }
+  - { key: H, mods: Control, chars: "z ~\r" }
   - { key: G, mods: Control, chars: "goto \r" }
   - { key: S, mods: Control|Shift, chars: "sudo !!\r" }
   - {

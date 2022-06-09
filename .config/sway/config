@@ -20,7 +20,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
-set $browser flatpak run org.mozilla.firefox
+set $browser firefox
 set $fbrowser pcmanfm
 set $sshot flameshot
 set $netmanager nmtui

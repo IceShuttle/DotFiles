@@ -19,14 +19,13 @@ alias la "exa -a --icons"
 alias lla "ll -a"
 alias tree "ls --tree"
 alias lsblk "lsblk -e7"
-alias bat "batcat"
 alias .. "z .."
 alias df "df -h"
 alias free "free -h"
 alias gs "git status"
-alias g git
+alias g "git"
 alias gd "git diff"
-alias goto "z (fdfind --type d | fzf)"
+alias goto "z (fd --type d | fzf)"
 alias config "/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias apt-update "sudo apt update && sudo apt upgrade -y"
 alias apt-ver "aptitude versions"
@@ -36,30 +35,31 @@ alias cs "config status"
 alias hr "eval (history | fzf)"
 alias hs "echo (history | fzf)"
 alias vim "nvim"
-alias hv "nvim (fdfind . -H | fzf)"
-alias cv "nvim (fdfind . ~/.config/ -H | fzf)"
+alias hv "nvim (fd . -H | fzf)"
+alias cv "nvim (fd . ~/.config/ -H | fzf)"
 alias ov "nvim (fzf)"
 alias dots "nvim (config ls-files | fzf)"
 alias rng "kitty --title "Ranger" -e /bin/bash ranger"
 
 #Adding nvm support
-set -x NVM_DIR ~/.nvm
-nvm use lts --silent 1>/dev/null 2>/dev/null
+#set -x NVM_DIR ~/.nvm
+#nvm use lts --silent 1>/dev/null 2>/dev/null
+
+#Changing editor to neovim
 set EDITOR "nvim"
-export EDITOR=nvim;
+#export EDITOR=nvim;
 
 #Adding Path
 fish_add_path ~/.yarn/bin
 fish_add_path ~/.cargo/bin
-fish_add_path ~/.local/share/umake/games
-fish_add_path ~/.local/share/umake/ide
+fish_add_path ~/.local/bin
 fish_add_path ~/Android/Sdk/platform-tools
 fish_add_path /nix/var/nix/profiles/default/bin
 fish_add_path ~/.nix-profile/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval ~/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+#eval ~/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
 zoxide init fish | source

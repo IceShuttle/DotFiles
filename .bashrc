@@ -125,10 +125,7 @@ export PATH="$HOME/programs/hashcat-6.2.1/hashcat.bin:$PATH"
 export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
 export PATH="$HOME/CustomScripts:$PATH"
 #Custom Aliases
-alias cls="clear"
-alias bat="batcat"
 alias vim="nvim"
-alias kdenlive="flatpak run org.kde.kdenlive"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 eval "$(starship init bash)"
 
