@@ -8,31 +8,25 @@ shell:
   program: /usr/bin/fish
 
 #window:
-#  opacity: 0.95
+#  opacity: 0.85
 font:
-  size: 15.0
+  size: 17.0
   normal:
-    #family: "JetBrains Mono Nerd font"
-    family: "FiraMono Nerd Font"
+    family: "JetBrains Mono Nerd font"
+    #family: "FiraMono Nerd Font"
 
 key_bindings:
-  - { key: H, mods: Control, chars: "z ~\r" }
+  - { key: H, mods: Control, chars: "z\r" }
   - { key: G, mods: Control, chars: "goto \r" }
-  - { key: S, mods: Control|Shift, chars: "sudo !!\r" }
   - {
       key: O,
       mods: Control|Shift,
-      chars: "nvim (fdfind --type d | fzf)\r"
+      chars: "nvim (fd --type d | fzf)\r"
     }
   - {
       key: T,
       mods: Control|Shift,
       chars: "npx alacritty-themes\r"
-    }
-  - {
-      key: I,
-      mods: Control,
-      chars: "sudo apt install (echo $history[1] | awk '{print $1}')\r"
     }
   - {
       key: Comma,
@@ -49,33 +43,4 @@ key_bindings:
       mods: Control|Shift,
       chars: "source ~/.config/fish/config.fish\r"
     }
-  - { key: U, mods: Control, chars: "update-all\r" }
-  - { key: F, mods: Control, chars: "nautilus . &\r" }
-colors:
-  # Default colors
-  primary:
-    background: '#282a36'
-    foreground: '#eff0eb'
-
-  # Normal colors
-  normal:
-    black: '#282a36'
-    red: '#ff5c57'
-    green: '#5af78e'
-    yellow: '#f3f99d'
-    blue: '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan: '#9aedfe'
-    white: '#f1f1f0'
-
-  # Bright colors
-  bright:
-    black: '#686868'
-    red: '#ff5c57'
-    green: '#5af78e'
-    yellow: '#f3f99d'
-    blue: '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan: '#9aedfe'
-    white: '#f1f1f0'
-theme: Snazzy
+  - { key: F, mods: Control, chars: "dolphin . &\r" }

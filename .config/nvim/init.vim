@@ -1,7 +1,6 @@
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'dag/vim-fish'
-"Plug 'glepnir/dashboard-nvim'
 "Nerd Tree config
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -32,7 +31,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'navarasu/onedark.nvim'
-Plug 'arcticicestudio/nord-vim'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'sainnhe/sonokai'
 Plug 'Rigellute/shades-of-purple.vim'
@@ -46,9 +44,9 @@ set relativenumber
 " Setting theme
 autocmd vimenter * ++nested colorscheme gruvbox
 
-let g:neovide_transparency=0.9
+"let g:neovide_transparency=0.9
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 
 let g:jedi#completions_enabled = 0
@@ -59,7 +57,8 @@ let g:neomake_python_enabled_markers = ['pylint']
 " Terminal exit mapping
 tnoremap <Esc> <C-\><C-n><cr>
 
-inoremap <C-e> <C-o>A
+" Aliases
+abbrev pa pass
 
 " Cder.nvim
 lua require('telescope').load_extension('cder')
@@ -73,6 +72,8 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " Custom mapping
 nnoremap <C-S-v> "+p
 nnoremap <leader>, <cmd>e ~/.config/nvim/init.vim<cr>
+nnoremap <leader>cd <cmd>Telescope cder<cr>
+nnoremap <leader>n <cmd>NERDTreeToggle<cr>
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
