@@ -12,8 +12,8 @@ shell:
 font:
   size: 17.0
   normal:
-    family: "JetBrains Mono Nerd font"
-    #family: "FiraMono Nerd Font"
+    #family: "JetBrains Mono Nerd font"
+    family: "FiraMono Nerd Font"
 
 key_bindings:
   - { key: H, mods: Control, chars: "z\r" }
