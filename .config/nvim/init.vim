@@ -1,13 +1,11 @@
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'dag/vim-fish'
-"Nerd Tree config
-Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'PhilRunninger/nerdtree-visual-selection'
+
+" Neotree Setup
+Plug 'MunifTanjim/nui.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-neo-tree/neo-tree.nvim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
