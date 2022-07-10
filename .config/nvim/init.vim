@@ -24,11 +24,11 @@ Plug 'zane-/cder.nvim'
 Plug 'ggandor/lightspeed.nvim'
 Plug 'neovim/nvim-lspconfig'
 
-" Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Lualine
+Plug 'nvim-lualine/lualine.nvim'
 
 " Themes
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'morhetz/gruvbox'
 Plug 'navarasu/onedark.nvim'
 Plug 'phanviet/vim-monokai-pro'
@@ -41,14 +41,14 @@ set mouse=a
 set number
 set relativenumber
 
+" Lualine Setup
+lua require('lualine').setup()
+
 " Setting theme
-autocmd vimenter * ++nested colorscheme gruvbox
+let g:tokyonight_style="night"
+autocmd vimenter * ++nested colorscheme tokyonight
 
 "let g:neovide_transparency=0.9
-let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
-let g:airline#extensions#tabline#enabled = 1
-
 let g:jedi#completions_enabled = 0
 let g:jedi#use_splits_not_buffers = "right"
 let g:deoplete#enable_at_startup = 1
