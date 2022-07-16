@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'jiangmiao/auto-pairs'
+Plug 'p00f/nvim-ts-rainbow'
 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -19,7 +20,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'zane-/cder.nvim'
 
-Plug 'ggandor/lightspeed.nvim'
 Plug 'neovim/nvim-lspconfig'
 
 " Lualine
@@ -34,13 +34,15 @@ Plug 'sainnhe/sonokai'
 Plug 'Rigellute/shades-of-purple.vim'
 call plug#end()
 
-set autochdir
+"set autochdir
 set mouse=a
 set number
 set relativenumber
+set shell=/usr/bin/fish
 
 " Lualine Setup
 lua require('lualine').setup()
+lua require('treesitter')
 
 " Setting theme
 let g:tokyonight_style="night"
@@ -60,21 +62,22 @@ abbrev pa pass
 
 " Cder.nvim
 lua require('telescope').load_extension('cder')
+nnoremap <silent>cd <cmd>Telescope cder<cr>
 
 " telescope.nvim shortcuts
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <silent>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <silent>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <silent>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <silent>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Custom mapping
 nnoremap <C-S-v> "+p
-nnoremap <leader>, <cmd>e ~/.config/nvim/init.vim<cr>
-nnoremap <leader>cd <cmd>Telescope cder<cr>
-nnoremap <leader>n <cmd>NERDTreeToggle<cr>
+nnoremap <silent>, <cmd>e ~/.config/nvim/init.vim<cr>
+nnoremap <silent>n <cmd>NeoTreeShowToggle<cr>
+nnoremap <silent>b <cmd>Neotree<cr>
 
 " Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+nmap <silent> rn <Plug>(coc-rename)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)

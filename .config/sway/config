@@ -19,9 +19,10 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 set $browser firefox
-set $fbrowser pcmanfm
+set $email kmail
+set $fbrowser dolphin
 set $sshot flameshot
 set $netmanager nmtui
 # Your preferred application launcher
@@ -34,7 +35,8 @@ exec /usr/bin/python3 /usr/bin/ulauncher --hide-window 1 > ~/logs/ulauncher.log 
 default_floating_border none
 exec /usr/bin/python3 ~/.config/sway/swayfader.py
 exec mpv --volume=150 /usr/share/sounds/freedesktop/stereo/service-login.oga
-set $menu ulauncher-toggle | xargs swaymsg exec --
+#set $menu ulauncher-toggle | xargs swaymsg exec --
+set $menu krunner | xargs swaymsg exec --
 exec lxpolkit
 
 include /etc/sway/config-vars.d/*
@@ -42,8 +44,8 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/wallpapers/artwork/backgrounds/LakeSideView.jpg fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg ~/bg/artwork/backgrounds/LakeSideView.jpg fill
 #
 # Example configuration:
 #
@@ -94,7 +96,8 @@ output * bg ~/wallpapers/artwork/backgrounds/LakeSideView.jpg fill
     bindsym $mod+f exec $fbrowser
     # Open picture folder
     bindsym Mod1+p exec $fbrowser  ~/Pictures
-
+    # Open email
+    bindsym $mod+e exec $email
     # Start a browser
     bindsym $mod+Shift+Return exec $browser
     
@@ -218,7 +221,7 @@ output * bg ~/wallpapers/artwork/backgrounds/LakeSideView.jpg fill
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+o layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+m fullscreen
