@@ -39,6 +39,7 @@ set mouse=a
 set number
 set relativenumber
 set shell=/usr/bin/fish
+let g:mapleader=" "
 
 " Lualine Setup
 lua require('lualine').setup()
@@ -62,26 +63,26 @@ abbrev pa pass
 
 " Cder.nvim
 lua require('telescope').load_extension('cder')
-nnoremap <silent>cd <cmd>Telescope cder<cr>
+nnoremap <leader>cd <cmd>Telescope cder<cr>
 
 " telescope.nvim shortcuts
-nnoremap <silent>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <silent>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <silent>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <silent>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Custom mapping
 nnoremap <C-S-v> "+p
-nnoremap <silent>, <cmd>e ~/.config/nvim/init.vim<cr>
-nnoremap <silent>n <cmd>NeoTreeShowToggle<cr>
-nnoremap <silent>b <cmd>Neotree<cr>
+nnoremap <leader>, <cmd>e ~/.config/nvim/init.vim<cr>
+nnoremap <leader>n <cmd>NeoTreeShowToggle<cr>
+nnoremap <leader>b <cmd>Neotree<cr>
 
 " Remap for rename current word
-nmap <silent> rn <Plug>(coc-rename)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <leader> rn <Plug>(coc-rename)
+nmap <leader> gd <Plug>(coc-definition)
+nmap <leader> gy <Plug>(coc-type-definition)
+nmap <leader> gi <Plug>(coc-implementation)
+nmap <leader> gr <Plug>(coc-references)
 
 " Use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -89,7 +90,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-inoremap <silent><expr> <Tab>
+inoremap <leader><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()

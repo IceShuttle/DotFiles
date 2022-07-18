@@ -152,7 +152,6 @@ export PATH="~/miniconda3/bin:$PATH"
 export PATH="~/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
 export PATH="~/miniconda3/bin:$PATH"
-export PATH="~/var/lib/flatpak/exports/bin:$PATH"
 
 export VISUAL=nvim;
 export EDITOR=nvim;
