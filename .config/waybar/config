@@ -94,16 +94,16 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
     },
-    "custom/launcher": {
-    		"format": " Menu",
-            "on-click": "nwggrid",
-        
-        },
-    "custom/power": {
-            	"format":"⏻",
-            	"on-click": "nwgbar",
-            	"tooltip": false,
-          },
-    
+    /* "custom/launcher": { */
+    /* 		"format": " Menu", */
+    /*         "on-click": "nwggrid", */
+    /*         "tooltip": false, */
+    /*     }, */
+    /* "custom/power": { */
+    /*         	"format":"⏻", */
+    /*         	"on-click": "nwgbar", */
+    /*         	"tooltip": false, */
+    /*       }, */
+    /*  */
 }
 

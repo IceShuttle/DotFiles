@@ -45,8 +45,8 @@ fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/bin
 #fish_add_path ~/Android/Sdk/platform-tools
-#fish_add_path /nix/var/nix/profiles/default/bin
-#fish_add_path ~/.nix-profile/bin
+fish_add_path /nix/var/nix/profiles/default/bin
+fish_add_path ~/.nix-profile/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
