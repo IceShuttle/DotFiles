@@ -5,28 +5,12 @@ local M = {}
 -- make sure you maintain the structure of `core/default_config.lua` here,
 -- example of changing theme:
 M.plugins = {
-  user = {
-     ["zane-/cder.nvim"]={},
-     ["p00f/nvim-ts-rainbow"] = {},
-     ["tpope/vim-fugitive"] = {},
-  },
-
-  override = {
-   ["nvim-telescope/telescope.nvim"] = {
-     extensions_list = { "themes", "terms", "cder" },
-   },
-   ["nvim-treesitter/nvim-treesitter"] = {
-      rainbow = {
-         enable = true,
-         extended_mode = true,
-         max_file_lines = nil,
-      }
-   },
-  }
+  user = require "custom.plugins",
+  override = require "custom.plugins.override",
 }
 
 M.ui = {
-   theme = "tokyonight",
+  theme = "onedark",
 }
 
 return M

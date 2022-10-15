@@ -22,6 +22,8 @@ set $right l
 set $scripts ~/.local/bin
 set $rustbin ~/.cargo/bin
 set $term $scripts/kitty
+
+set $runner dmenu_run -b
 set $browser flatpak run org.mozilla.firefox
 set $email geary
 set $fbrowser pcmanfm
@@ -125,6 +127,11 @@ exec swayidle -w \
     # Start your launcher
     bindsym $mod+d exec $menu
     bindsym Mod1+space exec $menu
+
+    # Runner
+    bindsym $mod+t exec $runner
+    bindsym Mod1+r exec $runner
+
     
     # Brigtness Settings
     bindsym --locked XF86MonBrightnessUp exec "brightnessctl s +10%"
