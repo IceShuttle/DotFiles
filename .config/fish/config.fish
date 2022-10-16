@@ -14,6 +14,7 @@ function sudo
     end
 end
 
+alias bat "batcat"
 alias ls "exa --icons"
 alias la "exa -a --icons"
 alias lla "ll -a"

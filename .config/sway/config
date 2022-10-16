@@ -39,7 +39,7 @@ exec $scripts/autotiling
 exec /usr/bin/python3 /usr/bin/ulauncher --hide-window 1 > ~/logs/ulauncher.log 2>&1
 default_floating_border none
 # exec /usr/bin/python3 ~/.config/sway/swayfader.py
-exec mpv --volume=150 /usr/share/sounds/freedesktop/stereo/service-login.oga
+exec mpv --volume=80 /usr/share/sounds/freedesktop/stereo/service-login.oga
 set $menu ulauncher-toggle | xargs swaymsg exec --
 # set $menu krunner | xargs swaymsg exec --
 exec lxpolkit
