@@ -163,6 +163,7 @@ exec swayidle -w \
     bindsym Mod1+tab focus right
 
     bindsym $mod+n exec $rustbin/sway-new-workspace open
+    bindsym $mod+grave exec $rustbin/sway-new-workspace open
     bindsym $mod+Shift+n exec $rustbin/sway-new-workspace move
     bindsym $mod+Shift+d exec $rustbin/sway-new-workspace open; exec $menu
 
