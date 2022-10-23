@@ -50,8 +50,8 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-# output * bg ~/bg/Pop!_OS Wallpaper.png fill
-output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
+output * bg ~/bg/garuda.jpg fill
+# output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 #
 # Example configuration:
 #
@@ -110,6 +110,7 @@ exec swayidle -w \
     bindsym $mod+e exec $email
     # Start a browser
     bindsym $mod+Shift+Return exec $browser
+    bindsym $mod+b exec $browser
     
     # Open network settings
     bindsym $mod+Mod1+n exec $term -e $netmanager
@@ -231,7 +232,7 @@ exec swayidle -w \
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+shift+v splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles

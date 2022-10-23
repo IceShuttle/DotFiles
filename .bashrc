@@ -121,15 +121,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#Custom exported variables
-export PATH="$HOME/programs/hashcat-6.2.1/hashcat.bin:$PATH"
-export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
-export PATH="$HOME/CustomScripts:$PATH"
-#Custom Aliases
-alias vim="nvim"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-eval "$(starship init bash)"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -145,6 +136,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+#Custom Aliases
+alias vim="nvim"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cs="config status"
+
 . "$HOME/.cargo/env"
 export PATH="~/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
@@ -152,3 +148,5 @@ export PATH="~/miniconda3/bin:$PATH"
 
 export VISUAL=nvim;
 export EDITOR=nvim;
+
+eval "$(starship init bash)"
