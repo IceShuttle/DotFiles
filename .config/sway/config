@@ -34,6 +34,10 @@ set $netmanager nmtui
 # on the original workspace that the command was run on.
 #set $menu wofi --show drun | xargs swaymsg exec --
 exec wname LG3D
+exec_always {
+  gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+  gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+}
 exec ulauncher & disown
 exec $scripts/autotiling
 exec /usr/bin/python3 /usr/bin/ulauncher --hide-window 1 > ~/logs/ulauncher.log 2>&1
@@ -101,6 +105,7 @@ exec swayidle -w \
     # Start a terminal
     bindsym $mod+Return exec $term
     bindsym $mod+c exec grimshot save screen
+    bindsym $mod+t exec foot
 
     # Start a file browser
     bindsym $mod+f exec $fbrowser
@@ -130,8 +135,7 @@ exec swayidle -w \
     bindsym Mod1+space exec $menu
 
     # Runner
-    bindsym $mod+t exec $runner
-    bindsym Mod1+r exec $runner
+    bindsym Mod1+f2 exec $runner
 
     
     # Brigtness Settings
