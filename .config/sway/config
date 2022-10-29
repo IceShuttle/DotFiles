@@ -5,12 +5,14 @@
 # Read `man 5 sway` for a complete reference.
 for_window [title="^.*"] title_format ""
 default_border pixel 2
+default_floating_border none
 
 gaps inner 10
 gaps outer 15
 
 ### Variables
 #
+set $seat0 xcursor_theme Breeze 48
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -27,7 +29,7 @@ set $runner dmenu_run -b
 set $browser flatpak run org.mozilla.firefox
 set $email geary
 set $fbrowser pcmanfm
-set $sshot flameshot
+set $sshot grimshot
 set $netmanager nmtui
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -37,16 +39,15 @@ exec wname LG3D
 exec_always {
   gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
   gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+  gsettings set org.gnome.desktop.interface cursor-theme "Breeze"
 }
 exec ulauncher & disown
 exec $scripts/autotiling
 exec /usr/bin/python3 /usr/bin/ulauncher --hide-window 1 > ~/logs/ulauncher.log 2>&1
-default_floating_border none
-# exec /usr/bin/python3 ~/.config/sway/swayfader.py
 exec mpv --volume=80 /usr/share/sounds/freedesktop/stereo/service-login.oga
 set $menu ulauncher-toggle | xargs swaymsg exec --
-# set $menu krunner | xargs swaymsg exec --
 exec lxpolkit
+exec emacs --daemon &
 
 include /etc/sway/config-vars.d/*
 
