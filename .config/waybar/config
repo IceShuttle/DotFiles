@@ -90,7 +90,7 @@
         "format-wifi": " {essid}",
         "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
         "format-disconnected": "⚠ Disconnected",
-        "on-click": "alacritty -e nmtui"
+        "on-click": "foot -e nmtui"
     },
     "pulseaudio": {
         "scroll-step": 5,
