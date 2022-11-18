@@ -23,7 +23,7 @@ set $right l
 # Your preferred terminal emulator
 set $scripts ~/.local/bin
 set $rustbin ~/.cargo/bin
-set $term $scripts/kitty
+set $term kitty
 
 set $runner dmenu_run -b
 set $browser flatpak run org.mozilla.firefox
@@ -39,15 +39,16 @@ exec wname LG3D
 exec_always {
   gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
   gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-  gsettings set org.gnome.desktop.interface cursor-theme "Breeze"
+  # gsettings set org.gnome.desktop.interface cursor-theme "Breeze"
 }
 exec ulauncher & disown
-exec $scripts/autotiling
 exec /usr/bin/python3 /usr/bin/ulauncher --hide-window 1 > ~/logs/ulauncher.log 2>&1
-exec mpv --volume=80 /usr/share/sounds/freedesktop/stereo/service-login.oga
 set $menu ulauncher-toggle | xargs swaymsg exec --
+
+exec mpv --volume=80 /usr/share/sounds/freedesktop/stereo/service-login.oga
+exec $scripts/autotiling
 exec lxpolkit
-exec emacs --daemon &
+exec emacs --daemon
 
 include /etc/sway/config-vars.d/*
 
@@ -86,11 +87,9 @@ exec swayidle -w \
 # Example configuration:
 #
    input type:touchpad {
-       #dwt enable
        tap enabled
        natural_scroll enabled
        middle_emulation enabled
-
    }
    input type:keyboard {
    	xkb_options caps:swapescape
@@ -127,6 +126,9 @@ exec swayidle -w \
     # Start web apps
     bindsym Mod1+w exec $browser web.whatsapp.com
     bindsym Mod1+y exec $browser piped.kavin.rocks
+
+    # Update System
+    bindsym $mod+u exec foot sh -c "sudo nala upgrade -y && flatpak update -y"
 
     # Kill focused window
     bindsym $mod+q kill
