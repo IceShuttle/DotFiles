@@ -141,8 +141,6 @@ alias sbrc="source .bashrc"
 alias vim="nvim"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cs="config status"
-
-. "$HOME/.cargo/env"
 export PATH="~/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
 export PATH="~/miniconda3/bin:$PATH"
@@ -150,5 +148,9 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 
 export VISUAL=nvim;
 export EDITOR=nvim;
+
+if [ -f "$HOME/.cargo/env" ]; then
+	. "$HOME/.cargo/env"
+fi
 
 eval "$(starship init bash)"

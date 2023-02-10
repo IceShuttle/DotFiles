@@ -35,11 +35,10 @@ alias ov "nvim (fzf)"
 alias hv "nvim (fd . -H | fzf)"
 
 
-alias config "git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias cv "nvim (fd . ~/.config/ -H | fzf)"
 alias cf "fd . ~/.config/ -H | fzf"
-alias dots "nvim (config ls-files | fzf)"
-alias cs "config status"
+alias dots "nvim (yadm ls-files | fzf)"
+alias cs "yadm status"
 
 #Changing editor to neovim
 set EDITOR "nvim"
@@ -53,11 +52,6 @@ fish_add_path ~/bin
 fish_add_path /nix/var/nix/profiles/default/bin
 fish_add_path ~/.nix-profile/bin
 fish_add_path ~/.emacs.d/bin
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#eval ~/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
 
 zoxide init fish | source
 starship init fish | source
