@@ -14,6 +14,9 @@ function sudo
     end
 end
 
+fundle plugin 'edc/bass'
+fundle init
+
 alias ls "exa --icons"
 alias la "exa -a --icons"
 alias ll "exa --icons -l"
