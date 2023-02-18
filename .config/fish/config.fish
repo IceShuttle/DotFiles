@@ -49,7 +49,7 @@ fish_add_path ~/.yarn/bin
 fish_add_path ~/.bun/bin
 fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
-fish_add_path ~/.local/share/neovim/bin
+fish_add_path ~/.local/share/bob/nvim-bin
 fish_add_path ~/bin
 #fish_add_path ~/Android/Sdk/platform-tools
 fish_add_path ~/.nix-profile/bin
