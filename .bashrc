@@ -139,8 +139,10 @@ unset __conda_setup
 #Custom Aliases
 alias sbrc="source .bashrc"
 alias vim="nvim"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias cs="config status"
+alias proxy="export http_proxy="127.0.0.1:8000";export https_proxy="127.0.0.1:8000""
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
 export PATH="~/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
 export PATH="~/miniconda3/bin:$PATH"
