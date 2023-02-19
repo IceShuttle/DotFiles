@@ -33,7 +33,6 @@ alias gd "git diff"
 alias goto "z (fd --type d | fzf)"
 alias hr "eval (history | fzf)"
 alias hs "echo (history | fzf)"
-alias vim "nvim"
 alias ov "nvim (fzf)"
 alias hv "nvim (fd . -H | fzf)"
 
