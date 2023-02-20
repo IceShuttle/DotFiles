@@ -4,7 +4,6 @@
 #| (_| (_) | | | |  _| | (_| |_|  _| \__ \ | | |
 # \___\___/|_| |_|_| |_|\__, (_)_| |_|___/_| |_|
 #                       |___/                   
-source ~/.profile;clear;
 
 function sudo
     if test "$argv" = !!
@@ -16,6 +15,8 @@ end
 
 fundle plugin 'edc/bass'
 fundle init
+
+bass source ~/.profile;clear;
 
 alias ls "exa --icons"
 alias la "exa -a --icons"
@@ -41,7 +42,6 @@ alias cv "nvim (fd . ~/.config/ -H | fzf)"
 alias cf "fd . ~/.config/ -H | fzf"
 alias dots "nvim (yadm ls-files | fzf)"
 alias ys "yadm status"
-alias proxy "set -x http_proxy "127.0.0.1:8000"; set -x https_proxy "127.0.0.1:8000""
 
 #Changing editor to neovim
 set EDITOR "nvim"
