@@ -7,8 +7,8 @@
 shell:
   program: /usr/bin/fish
 
-#window:
-#  opacity: 0.85
+window:
+ opacity: 0.95
 font:
   size: 15.0
   normal:
@@ -18,11 +18,6 @@ font:
 key_bindings:
   - { key: H, mods: Control, chars: "z\r" }
   - { key: G, mods: Control, chars: "goto \r" }
-  - {
-      key: O,
-      mods: Control|Shift,
-      chars: "nvim (fd --type d | fzf)\r"
-    }
   - {
       key: T,
       mods: Control|Shift,

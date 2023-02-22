@@ -47,7 +47,6 @@ alias ys "yadm status"
 set EDITOR "nvim"
 
 #Adding Path
-fish_add_path ~/.yarn/bin
 fish_add_path ~/.bun/bin
 fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
