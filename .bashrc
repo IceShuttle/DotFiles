@@ -117,42 +117,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 #Custom Aliases
 alias sbrc="source .bashrc"
-alias vim="nvim"
-alias proxy="export http_proxy="127.0.0.1:8000";export https_proxy="127.0.0.1:8000""
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/miniconda3/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
 export VISUAL=nvim;
 export EDITOR=nvim;
-
-if [ -f "$HOME/.cargo/env" ]; then
-	. "$HOME/.cargo/env"
-fi
 
 eval "$(starship init bash)"

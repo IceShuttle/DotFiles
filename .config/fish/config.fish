@@ -37,23 +37,20 @@ alias hs "echo (history | fzf)"
 alias ov "nvim (fzf)"
 alias hv "nvim (fd . -H | fzf)"
 
-
 alias cv "nvim (fd . ~/.config/ -H | fzf)"
 alias cf "fd . ~/.config/ -H | fzf"
 alias dots "nvim (yadm ls-files | fzf)"
 alias ys "yadm status"
 
-#Changing editor to neovim
-set EDITOR "nvim"
-
 #Adding Path
 fish_add_path ~/.bun/bin
 fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
-fish_add_path ~/.local/share/bob/nvim-bin
 fish_add_path ~/bin
-#fish_add_path ~/Android/Sdk/platform-tools
 fish_add_path ~/.nix-profile/bin
+
+#Changing editor to neovim
+set EDITOR "nvim"
 
 zoxide init fish | source
 starship init fish | source
