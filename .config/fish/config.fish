@@ -18,11 +18,11 @@ fundle init
 
 bass source ~/.profile;clear;
 
-alias ls "exa --icons"
-alias la "exa -a --icons"
-alias ll "exa --icons -l"
-alias lla "exa --icons -la"
-alias rt "exa --icons --tree"
+alias ls "lsd"
+alias la "lsd -a"
+alias ll "lsd  -l"
+alias lla "lsd  -la"
+alias rt "lsd  --tree"
 alias .. "z .."
 
 alias sfc "source ~/.config/fish/config.fish"
@@ -41,10 +41,11 @@ alias cv "nvim (fd . ~/.config/ -H | fzf)"
 alias cf "fd . ~/.config/ -H | fzf"
 alias dots "nvim (yadm ls-files | fzf)"
 alias ys "yadm status"
+alias yd "yadm diff"
 
 #Adding Path
 fish_add_path ~/.bun/bin
-fish_add_path ~/.cargo/bin
+#fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/bin
 fish_add_path ~/.nix-profile/bin

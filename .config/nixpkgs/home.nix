@@ -21,6 +21,10 @@
     pkgs.stylua
     pkgs.htop-vim
     pkgs.starship
+    pkgs.lf
+    pkgs.ueberzug
+    pkgs.vimv
+    pkgs.lsd
   ];
 
   # Let Home Manager install and manage itself.
