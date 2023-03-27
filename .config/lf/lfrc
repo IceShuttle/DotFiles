@@ -1,0 +1,5 @@
+/* set ratios 1:2:3 */
+/* set previewer ~/.config/lf/lf_kitty_preview */
+/* set cleaner ~/.config/lf/lf_kitty_clean */
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/cleaner
