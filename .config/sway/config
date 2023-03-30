@@ -38,6 +38,7 @@ set $netmanager nmtui
 exec wname LG3D
 exec_always {
   # gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+  gsettings set org.gnome.desktop.interface gtk-theme "Adapta-Nokto-Eta"
   gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
   gsettings set org.gnome.desktop.interface cursor-theme "Breeze"
 }
