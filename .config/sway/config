@@ -23,10 +23,10 @@ set $right l
 # Your preferred terminal emulator
 set $scripts ~/.local/bin
 set $rustbin ~/.cargo/bin
-set $term kitty
+set $term ~/.local/bin/kitty
 
 set $runner dmenu_run -b
-set $browser flatpak run org.mozilla.firefox
+set $browser firefox
 set $email geary
 set $fbrowser pcmanfm
 set $sshot grimshot
@@ -37,9 +37,9 @@ set $netmanager nmtui
 #set $menu wofi --show drun | xargs swaymsg exec --
 exec wname LG3D
 exec_always {
-  gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+  # gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
   gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-  # gsettings set org.gnome.desktop.interface cursor-theme "Breeze"
+  gsettings set org.gnome.desktop.interface cursor-theme "Breeze"
 }
 exec ulauncher & disown
 exec /usr/bin/python3 /usr/bin/ulauncher --hide-window 1 > ~/logs/ulauncher.log 2>&1
