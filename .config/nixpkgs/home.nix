@@ -23,6 +23,8 @@
     pkgs.starship
     pkgs.vimv
     pkgs.lsd
+    pkgs.lf
+    pkgs.cinnamon.warpinator
 
     pkgs.nwg-drawer
     pkgs.nwg-bar
