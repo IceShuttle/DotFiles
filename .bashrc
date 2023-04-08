@@ -130,4 +130,5 @@ export VISUAL=nvim;
 export EDITOR=nvim;
 
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 . "$HOME/.cargo/env"

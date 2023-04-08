@@ -12,7 +12,7 @@ gaps outer 15
 
 ### Variables
 #
-set $seat0 xcursor_theme Breeze 48
+set $seat0 xcursor_theme breeze_cursor 48
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -25,10 +25,11 @@ set $scripts ~/.local/bin
 set $rustbin ~/.cargo/bin
 set $term ~/.local/bin/kitty
 
+set $appmenu nwg-drawer
 set $runner dmenu_run -b
 set $browser firefox
-set $email geary
-set $fbrowser thunar
+set $email thunderbird
+set $fbrowser pcmanfm
 set $sshot grimshot
 set $netmanager nmtui
 # Your preferred application launcher
@@ -37,19 +38,20 @@ set $netmanager nmtui
 #set $menu wofi --show drun | xargs swaymsg exec --
 exec wname LG3D
 exec_always {
-  blueman & disown
   # gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
-  gsettings set org.gnome.desktop.interface gtk-theme "Orchis-Dark"
+  gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+  gsettings set org.gnome.desktop.wm.prefernces theme "Dracula"
   gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-  gsettings set org.gnome.desktop.interface cursor-theme "Breeze"
+  gsettings set org.gnome.desktop.interface cursor-theme "breeze_cursor"
+  blueman-applet
 }
 exec ulauncher & disown
 exec /usr/bin/python3 /usr/bin/ulauncher --hide-window 1 > ~/logs/ulauncher.log 2>&1
 set $menu ulauncher-toggle | xargs swaymsg exec --
 
-exec mpv --volume=80 /usr/share/sounds/freedesktop/stereo/service-login.oga
-exec $scripts/autotiling
+exec mpv --volume=80 ~/Music/windows_xp_startup.mp3
 exec lxpolkit
+exec autotiling-rs
 exec emacs --daemon
 
 include /etc/sway/config-vars.d/*
@@ -96,6 +98,7 @@ exec swayidle -w \
    }
    input type:keyboard {
    	xkb_options caps:swapescape
+    xkb_numlock enabled
    }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -119,6 +122,9 @@ exec swayidle -w \
     # Start a browser
     bindsym $mod+Shift+Return exec $browser
     bindsym $mod+b exec $browser
+
+
+    bindsym $mod+a exec $appmenu
     
     # Open network settings
     bindsym $mod+Mod1+n exec $term -e $netmanager
@@ -131,7 +137,7 @@ exec swayidle -w \
     bindsym Mod1+y exec $browser piped.kavin.rocks
 
     # Update System
-    bindsym $mod+u exec foot sh -c "sudo nala upgrade -y && flatpak update -y"
+    bindsym $mod+shift+u exec foot sh -c "sudo apt-get update && sudo apt-get upgrade -y && flatpak update -y"
 
     # Kill focused window
     bindsym $mod+q kill
@@ -150,8 +156,8 @@ exec swayidle -w \
 
     # Volume Control
     bindsym --locked XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-    bindsym --locked XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-    bindsym --locked XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    bindsym --locked XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5% && mpv /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+    bindsym --locked XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5% && mpv /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -260,7 +266,7 @@ exec swayidle -w \
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    bindsym $mod+u focus parent
 #
 # Scratchpad:
 #

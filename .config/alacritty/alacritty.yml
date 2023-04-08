@@ -40,36 +40,30 @@ key_bindings:
     }
   - { key: F, mods: Control, chars: "nautilus . &\r" }
 colors:
-  name: TokyoNight Night
-  author: Folke
-  # Default colors
+  name: astromouse
+  author: ""
   primary:
-    background: '0x1a1b26'
-    foreground: '0xc0caf5'
-
-  # Normal colors
+    background: "#000000"
+    foreground: "#ffffff"
+  cursor:
+    text: "#000000"
+    cursor: "#ffffff"
   normal:
-    black: '0x15161E'
-    red: '0xf7768e'
-    green: '0x9ece6a'
-    yellow: '0xe0af68'
-    blue: '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan: '0x7dcfff'
-    white: '0xa9b1d6'
-
-  # Bright colors
+    black: "#1c1c1c"
+    red: "#d770af"
+    green: "#9acc79"
+    yellow: "#d0d26b"
+    blue: "#77b6c5"
+    magenta: "#a488d9"
+    cyan: "#7fcab3"
+    white: "#8d8d8d"
   bright:
-    black: '0x414868'
-    red: '0xf7768e'
-    green: '0x9ece6a'
-    yellow: '0xe0af68'
-    blue: '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan: '0x7dcfff'
-    white: '0xc0caf5'
-
-  indexed_colors:
-    - { index: 16, color: '0xff9e64' }
-    - { index: 17, color: '0xdb4b4b' }
-theme: Tokyonight_Night
+    black: "#3d3a3a"
+    red: "#d28abf"
+    green: "#8fb676"
+    yellow: "#c8bc45"
+    blue: "#8fa7b9"
+    magenta: "#bd89de"
+    cyan: "#6ec2a8"
+    white: "#dad3d3"
+theme: Astromouse
