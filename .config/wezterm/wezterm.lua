@@ -14,8 +14,11 @@ end
 -- This is where you actually apply your config choices
 config.default_prog = { '/usr/bin/fish', '-l' }
 config.font = wezterm.font 'JetBrains Mono'
+config.default_cursor_style = "BlinkingUnderline"
 -- For example, changing the color scheme:
-config.color_scheme = 'Aci (Gogh)'
+config.color_scheme = 'Adventure'
+config.front_end="OpenGL"
+
 
 -- and finally, return the configuration to wezterm
 return config
