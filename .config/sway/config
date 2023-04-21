@@ -23,13 +23,14 @@ set $right l
 # Your preferred terminal emulator
 set $scripts ~/.local/bin
 set $rustbin ~/.cargo/bin
-set $term ~/.local/bin/kitty
+set $term kitty
 
 set $appmenu nwg-drawer
 set $runner dmenu_run -b
 set $browser firefox
 set $email thunderbird
 set $fbrowser pcmanfm
+set $emacs emacsclient -ca emacs
 set $sshot grimshot
 set $netmanager nmtui
 # Your preferred application launcher
@@ -37,6 +38,11 @@ set $netmanager nmtui
 # on the original workspace that the command was run on.
 #set $menu wofi --show drun | xargs swaymsg exec --
 exec wname LG3D
+
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 exec_always {
   # gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
   gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
@@ -49,7 +55,7 @@ exec ulauncher & disown
 exec /usr/bin/python3 /usr/bin/ulauncher --hide-window 1 > ~/logs/ulauncher.log 2>&1
 set $menu ulauncher-toggle | xargs swaymsg exec --
 
-exec mpv --volume=80 ~/Music/windows_xp_startup.mp3
+exec mpv --volume=80 /usr/share/sounds/freedesktop/stereo/service-login.oga
 exec lxpolkit
 exec autotiling-rs
 exec emacs --daemon
@@ -62,6 +68,7 @@ include /etc/sway/config-vars.d/*
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # output * bg ~/Pictures/bg/wallhaven-wyl1k6.png fill
 output * bg ~/Pictures/bg/night.jpg fill
+# output * bg ~/Pictures/bg/H-jk.png fill
 # output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 #
 # Example configuration:
@@ -112,29 +119,35 @@ exec swayidle -w \
     bindsym $mod+Return exec $term
     bindsym $mod+c exec grimshot save screen
     bindsym $mod+t exec foot
+    bindsym $mod+delete exec foot -- htop
 
+## EMACS KEY BINDINGS
     # Start a file browser
-    bindsym $mod+f exec $fbrowser
+    bindsym $mod+f exec $emacs ~/
+
     # Open picture folder
-    bindsym Mod1+p exec $fbrowser  ~/Pictures
-    # Open email
-    bindsym $mod+e exec $email
+    bindsym Mod1+p exec $emacs  ~/Pictures
+
+    # Open emacs
+    bindsym $mod+e exec $emacs
+
+
     # Start a browser
     bindsym $mod+Shift+Return exec $browser
     bindsym $mod+b exec $browser
 
-
     bindsym $mod+a exec $appmenu
-    
-    # Open network settings
-    bindsym $mod+Mod1+n exec $term -e $netmanager
-
-    # Open network settings
-    #bindsym $mod+Mod1+b exec blueberry
+    bindsym $mod+shift+s exec systemctl suspend
+    bindsym Mod1+f exec $fbrowser
 
     # Start web apps
     bindsym Mod1+w exec $browser web.whatsapp.com
     bindsym Mod1+y exec $browser piped.kavin.rocks
+    bindsym Mod1+g exec $browser github.com
+
+    # Open network settings
+    bindsym $mod+Mod1+n exec $term -e $netmanager
+
 
     # Update System
     bindsym $mod+shift+u exec foot sh -c "sudo apt-get update && sudo apt-get upgrade -y && flatpak update -y"

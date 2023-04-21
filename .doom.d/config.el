@@ -8,7 +8,7 @@
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "John Doe"
       user-mail-address "john@doe.com")
-
+(setq! doom-unicode-font (font-spec :family "JetBrainsMono Nerd Font" :size 14))
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use

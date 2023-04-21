@@ -126,8 +126,8 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
-export VISUAL=nvim;
-export EDITOR=nvim;
+export VISUAL="nvim";
+export EDITOR="nvim";
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
