@@ -37,6 +37,7 @@ set $netmanager nmtui
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu wofi --show drun | xargs swaymsg exec --
+include /etc/sway/config-vars.d/*
 exec wname LG3D
 
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -60,16 +61,13 @@ exec lxpolkit
 exec autotiling-rs
 exec emacs --daemon
 
-include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-# output * bg ~/Pictures/bg/wallhaven-wyl1k6.png fill
-output * bg ~/Pictures/bg/night.jpg fill
 # output * bg ~/Pictures/bg/H-jk.png fill
-# output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
+output * bg ~/Pictures/bg/pop-os wallpapers master original/nick-nazzaro-ice-cave.png fill
 #
 # Example configuration:
 #
@@ -86,9 +84,9 @@ output HDMI-A-1 resolution 1920x1080 position 1920,0 adaptive_sync  on
 #          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
 #          before-sleep 'swaylock -f -c 000000'
 exec swayidle -w \
-         timeout 300 'swaylock -f -i ~/bg/pixelisland.jpg' \
+         timeout 300 'swaylock -f -i ~/Pictures/bg/wallhaven-wyl1k6.png' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -i ~/bg/pixelisland.jpg'
+         before-sleep 'swaylock -f -i ~/Pictures/bg/wallhaven-wyl1k6.png'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -104,8 +102,8 @@ exec swayidle -w \
        middle_emulation enabled
    }
    input type:keyboard {
-   	xkb_options caps:swapescape
-    xkb_numlock enabled
+        xkb_options caps:swapescape
+        xkb_numlock enabled
    }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -129,7 +127,7 @@ exec swayidle -w \
     bindsym Mod1+p exec $emacs  ~/Pictures
 
     # Open emacs
-    bindsym $mod+e exec $emacs
+    bindsym Mod1+e exec $emacs
 
 
     # Start a browser
@@ -137,8 +135,10 @@ exec swayidle -w \
     bindsym $mod+b exec $browser
 
     bindsym $mod+a exec $appmenu
-    bindsym $mod+shift+s exec systemctl suspend
     bindsym Mod1+f exec $fbrowser
+    bindsym $mod+e exec $email
+
+    bindsym $mod+shift+s exec systemctl suspend
 
     # Start web apps
     bindsym Mod1+w exec $browser web.whatsapp.com
@@ -183,7 +183,7 @@ exec swayidle -w \
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
