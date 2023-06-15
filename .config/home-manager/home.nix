@@ -20,10 +20,8 @@
     pkgs.du-dust
     pkgs.stylua
     pkgs.starship
+    pkgs.lazygit
 
-    pkgs.lf
-    pkgs.lsd
-    pkgs.waybar
     pkgs.nwg-drawer
     pkgs.nwg-bar
     pkgs.autotiling-rs

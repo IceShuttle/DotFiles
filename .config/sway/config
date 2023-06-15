@@ -29,7 +29,7 @@ set $appmenu nwg-drawer
 set $runner dmenu_run -b
 set $browser firefox
 set $email thunderbird
-set $fbrowser pcmanfm
+set $fbrowser thunar
 set $emacs emacsclient -ca emacs
 set $sshot grimshot
 set $netmanager nmtui
