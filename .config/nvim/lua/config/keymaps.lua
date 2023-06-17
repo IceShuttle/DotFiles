@@ -32,23 +32,15 @@ map("n", "<leader>gc", ":G commit ")
 map("n", "<leader>g", "<cmd> Neogit<CR>")
 
 -- Trouble.nvim
--- map("n","<leader>tx ","<cmd> TroubleToggle<CR>")
--- map("n","<leader>tw ","<cmd> TroubleToggle workspace_diagnostics<CR>")
--- map("n","<leader>td ","<cmd> TroubleToggle document_diagnostics<CR>")
--- map("n","<leader>tq ","<cmd> TroubleToggle quickfix<CR>")
--- map("n","<leader>tl ","<cmd> TroubleToggle loclist<CR>")
--- map("n","gr","<cmd> TroubleToggle lsp_references<CR>")
+map("n", "<leader>tx ", "<cmd> TroubleToggle<CR>")
+map("n", "<leader>tw ", "<cmd> TroubleToggle workspace_diagnostics<CR>")
+map("n", "<leader>td ", "<cmd> TroubleToggle document_diagnostics<CR>")
+map("n", "<leader>tq ", "<cmd> TroubleToggle quickfix<CR>")
+map("n", "<leader>tl ", "<cmd> TroubleToggle loclist<CR>")
+map("n", "gr", "<cmd> TroubleToggle lsp_references<CR>")
 
 -- Symbols def
 -- map("n","<leader>d","<cmd> SymbolsOutline<CR>")
-
---Restore.nvim
--- restore the session for the current directory
-vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], {})
--- restore the last session
-vim.api.nvim_set_keymap("n", "<leader>ql", [[<cmd>lua require("persistence").load({ last = true })<cr>]], {})
--- stop Persistence => session won't be saved on exit
-vim.api.nvim_set_keymap("n", "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]], {})
 
 -- Refactor.nvim
 -- Remaps for the refactoring operations currently offered by the plugin

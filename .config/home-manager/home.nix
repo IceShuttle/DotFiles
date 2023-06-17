@@ -21,7 +21,9 @@
     pkgs.stylua
     pkgs.starship
     pkgs.lazygit
+    pkgs.htop-vim
 
+    pkgs.waybar
     pkgs.nwg-drawer
     pkgs.nwg-bar
     pkgs.autotiling-rs

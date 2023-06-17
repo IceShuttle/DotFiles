@@ -13,12 +13,13 @@ function sudo
     end
 end
 
-fundle plugin 'edc/bass'
+fundle plugin edc/bass
 fundle init
 
-bass source ~/.profile;clear;
+bass source ~/.profile
+clear
 
-alias ls "lsd"
+alias ls lsd
 alias la "lsd -a"
 alias ll "lsd  -l"
 alias lla "lsd  -la"
@@ -29,9 +30,9 @@ alias sfc "source ~/.config/fish/config.fish"
 alias df "df -h"
 alias free "free -h"
 alias G "git status"
-alias g "git"
+alias g git
 alias gd "git diff"
-alias goto "z (fd --type d | fzf)"
+alias gt "z (fd --type d | fzf)"
 alias hr "eval (history | fzf)"
 alias hs "echo (history | fzf)"
 alias ov "nvim (fzf)"
@@ -52,7 +53,7 @@ fish_add_path ~/bin
 fish_add_path ~/.nix-profile/bin
 
 #Changing editor to neovim
-set EDITOR "nvim"
+set EDITOR nvim
 
 zoxide init fish | source
 starship init fish | source
