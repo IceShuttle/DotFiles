@@ -22,6 +22,7 @@
     pkgs.starship
     pkgs.lazygit
     pkgs.htop-vim
+    pkgs.julia
 
     pkgs.waybar
     pkgs.nwg-drawer
