@@ -25,4 +25,15 @@ return {
       require("telescope").load_extension("cder")
     end,
   },
+  {
+    "stevearc/aerial.nvim",
+    opts = function()
+      require("telescope").load_extension("aerial")
+    end,
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
 }

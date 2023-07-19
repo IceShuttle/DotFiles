@@ -12,8 +12,8 @@ shell:
 font:
   size: 15.0
   normal:
-    #family: "JetBrains Mono Nerd font"
-    family: "FuraMono Nerd Font"
+    family: "JetBrains Mono Nerd font"
+    #family: "FuraMono Nerd Font"
 
 key_bindings:
   - { key: H, mods: Control, chars: "z\r" }
@@ -32,11 +32,6 @@ key_bindings:
       key: Period,
       mods: Control,
       chars: "nvim ~/.config/fish/config.fish\r"
-    }
-  - {
-      key: R,
-      mods: Control|Shift,
-      chars: "source ~/.config/fish/config.fish\r"
     }
   - { key: F, mods: Control, chars: "nautilus . &\r" }
 colors:

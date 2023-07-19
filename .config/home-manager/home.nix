@@ -21,13 +21,17 @@
     pkgs.stylua
     pkgs.starship
     pkgs.lazygit
-    pkgs.htop-vim
     pkgs.julia
+    pkgs.zellij
+    pkgs.mprocs
+    pkgs.htop-vim
+    pkgs.lsd
+    #pkgs.distrobox
 
-    pkgs.waybar
-    pkgs.nwg-drawer
-    pkgs.nwg-bar
-    pkgs.autotiling-rs
+    # pkgs.waybar
+    # pkgs.nwg-drawer
+    # pkgs.nwg-bar
+    # pkgs.autotiling-rs
   ];
 
   # Let Home Manager install and manage itself.
