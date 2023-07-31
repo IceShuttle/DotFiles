@@ -16,7 +16,10 @@ return {
     end,
   },
   {
-    "HiPhish/nvim-ts-rainbow2",
+    "p00f/nvim-ts-rainbow",
+  },
+  {
+    "neanias/everforest-nvim",
   },
   { "akinsho/toggleterm.nvim", version = "*", opts = {} },
   {

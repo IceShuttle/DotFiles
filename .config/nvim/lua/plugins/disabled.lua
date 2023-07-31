@@ -1,3 +1,3 @@
 return {
-  { "folke/noice", enabled = false },
+  { "rcarriga/nvim-notify", enabled = false },
 }

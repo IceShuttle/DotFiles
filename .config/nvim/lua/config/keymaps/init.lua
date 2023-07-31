@@ -23,7 +23,6 @@ map("t", "<A-h>", "<cmd>ToggleTerm<CR>")
 -- Telescope shortcuts
 map("n", "<leader>cd", "<cmd> Telescope cder<CR>")
 map("n", "<leader>j", "<cmd> Telescope aerial<CR>")
-map("n", "<leader>fr", "<cmd> Telescope frecency<CR>")
 
 -- Harpoon shortcuts
 map("n", "<leader>a", '<cmd>lua require("harpoon.mark").add_file()<CR>')
